@@ -1,2 +1,24 @@
-# Habit_Tracker
+# 🧠 Habit Tracker in Python
 A beginner-friendly Python project to track daily habits. Supports adding, deleting, and marking tasks, shows progress with graphs, and automatically saves your data using files.
+## 🚀 Features
+
+- ✅ Add one or multiple habits at once
+- ✅ Delete tasks from your habit list
+- ✅ Mark tasks as completed for a specific day
+- ✅ Automatically calculates streaks (days where all tasks were completed)
+- 📊 Plot your daily progress using a line graph
+- 💾 Auto-save your tasks and progress to a file (`habit_data.json`)
+- 🔁 Automatically load previous data on startup
+
+---
+
+## 🛠️ Technologies and Concepts Used
+
+- **Python Basics**: Variables, functions, lists, sets, dictionaries
+- **Object-Oriented Programming (OOP)**: Classes and methods to organize code
+- **File Handling**:
+  - `json` to save and load data
+  - `os.path.exists()` to safely handle files
+- **Matplotlib**: For plotting a graph of task completion
+- **Control Structures**: `if-else`, `while`, `try-except` for user interaction
+
