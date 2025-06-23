@@ -8,7 +8,7 @@ class Habit:
         self.com={}
         self.load_data()
     def save_data(self):
-        data={"task":"self.tasks","completed":"self.com"}
+        data={"task":self.tasks,"completed":self.com}
         with open("habit_data.json","w") as f:
             json.dump(data,f)
             
@@ -16,8 +16,8 @@ class Habit:
         if os.path.exists("habit_data.json"):
             with open("habit_data.json","r") as f:
                 data=json.load(f)
-                self.tasks=get("tasks",[])
-                self.com=data.com("com",{})
+                self.tasks=data.get("tasks",[])
+                self.com=data.get("com",{})
                 
     def add(self,task):
         task=[t.strip().lower() for t in task.split(',')]
@@ -46,7 +46,7 @@ class Habit:
         
     def streak(self):
         streak=0
-        for date in self.com:
+        for date in sorted(self.com):
             completed=set(self.com[date])
             required=set(self.tasks)
             if(completed==required):
