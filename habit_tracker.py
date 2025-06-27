@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 from datetime import date
 import json
 import os
@@ -53,20 +52,7 @@ class Habit:
                 streak+=1
             else:
                 break
-        print("Your current streak is {}".format(streak))
-        
-    def graph(self):
-        x=[]
-        y=[]
-        for date in sorted(self.com):
-            x.append(date)
-            y.append(len(self.com[date]))
-        plt.xlabel("Dates")
-        plt.ylabel("Tasks Completed")
-        plt.title("Habit Tracker")
-        plt.plot(x,y,marker="o")
-        plt.show()
-
+        print("Your current streak is {}".format(streak))  
 o=Habit()
 while True:
     print("--Habit Tacker--")
@@ -74,9 +60,8 @@ while True:
     print("2.To Delete a Task")
     print("3.Mark tasks done")
     print("4.View Streak")
-    print("5.Show Graph")
-    print("6.View Tasks")
-    print("7.Exit")
+    print("5.View Tasks")
+    print("6.Exit")
     try:
         n = int(input("Enter a number: "))
         if n == 1:
@@ -91,10 +76,8 @@ while True:
         elif n == 4:
             o.streak()
         elif n == 5:
-            o.graph()
-        elif n == 6:
             print("Your current tasks are:", o.tasks)
-        elif n == 7:
+        elif n == 6:
             print("Thank You!")
             exit()
         else:
