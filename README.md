@@ -6,7 +6,6 @@ A beginner-friendly Python project to track daily habits. Supports adding, delet
 - ✅ Delete tasks from your habit list
 - ✅ Mark tasks as completed for a specific day
 - ✅ Automatically calculates streaks (days where all tasks were completed)
-- 📊 Plot your daily progress using a line graph
 - 💾 Auto-save your tasks and progress to a file (`habit_data.json`)
 - 🔁 Automatically load previous data on startup
 
@@ -19,6 +18,5 @@ A beginner-friendly Python project to track daily habits. Supports adding, delet
 - **File Handling**:
   - `json` to save and load data
   - `os.path.exists()` to safely handle files
-- **Matplotlib**: For plotting a graph of task completion
 - **Control Structures**: `if-else`, `while`, `try-except` for user interaction
 
